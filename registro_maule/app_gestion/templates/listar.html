@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Vacunados - Maule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/listar.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <div align="center">
+        <header>
+            <br>
+            <img  src="{% static 'img/logomaule.png' %}" width="278" height="125" alt="">
+            <br>
+            <br>
+        </header>
+    </div>
+    <!-- Header -->
+
+    <!--Contenido-->
+
+    <br><br>
+    <h3 align="center">Listado de Gente Vacunada</h3>
+    <br><br>
+
+    <div>
+      <form action="/listar_vacunado/" method="get">
+          <div class="container">
+            <table class="table table-stripped" style="text-transform: uppercase;">
+                    <thead>
+                      <tr>
+                        <th >Rut</th>
+                        <th >Nombre</th>
+                        <th >Apellido Materno</th>
+                        <th >Apellido Paterno</th>
+                        <th >Edad</th>
+                        <th >Nombre Vacuna</th>
+                        <th >Fecha Vacunación</th>
+                      </tr>
+                    </thead>
+                  {% if vacunados %}
+                  {% for vacu in vacunados %}
+                    <tbody>
+                      <tr>
+                        <td >{{ vacu.rut }}</td>
+                        <td >{{ vacu.nombre }}</td>
+                        <td >{{ vacu.appaterno  }}</td>
+                        <td >{{ vacu.apmaterno }}</td>
+                        <td >{{ vacu.edad }}</td>
+                        <td >{{ vacu.nom_vacuna }}</td>
+                        <td >{{ vacu.fecha }}</td>
+                        <br>
+                      </tr>
+                    </tbody>
+                  </table>
+                  {% endfor %}
+                  {% endif %}
+            </table>
+          </div>  
+            <div  class="row d-flex justify-content-center align-content-center"> 
+              <p align="center">
+                <input type="submit" value="Enlistar Vacunados"><br>
+                <a href="/paginaprincipal/">Volver</a>
+              </p> 
+            </div>
+      </div>
+      
+      <br>
+
+
+    <!--Contenido-->
+
+    <!-- Footer -->
+    <footer class="foot fixed-bottom">
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+    
+                <div class="col-sm-4 p">
+                  <div class="row">
+                    <div class="col-sm-">
+                      <p class="pfoot" align="center">
+                      
+                        Teléfono de Asistencia - +56 2 7734 9864
+                        <br>
+                        ______________________________________________
+                        <br>
+      
+                        Opción 1: Mesa de Ayuda
+                        <br>
+                        Opción 2: Reclamos y Consultas
+                        <br>
+                        Opción 3: Consultar Stock
+                        ______________________________________________
+                        <br><br>
+    
+                        Correo: centrodevacunado.macul@gob.cl
+      
+                      </p>
+                    </div>
+    
+                    <div class="col-sm-6">
+    
+                    </div>
+                  </div>
+    
+                </div>
+
+                <div class="col-sm-4">
+    
+                </div>
+    
+            </div>
+        </div>
+      </footer>  
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

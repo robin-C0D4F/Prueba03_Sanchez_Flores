@@ -1,0 +1,25 @@
+header
+{
+    background-color: rgb(85, 130, 228);
+}
+
+footer
+{
+    background-color: rgb(85, 130, 228);
+}
+
+.pfoot
+{
+    font-size: small;
+    text-align: center;
+}
+
+.card-text
+{
+    text-align: center;
+}
+
+.card-title
+{
+    text-align: center;
+}

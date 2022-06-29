@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso Vacunado - Maule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ingresar.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <div align="center">
+        <header>
+            <br>
+            <img src="{% static 'img/logomaule.png' %}" width="278" height="125" alt="">
+            <br>
+            <br>
+        </header>
+    </div>
+    <!-- Header -->
+
+    <br> <br>
+    <!-- Contenido -->
+    <div class="container">
+      <form action="/ingreso_vacunado/" method="get">
+        <table>
+            <tr>
+                <td>Rut</td>
+                <td><input type="text" name="txt_rut"></td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" name="txt_nombre"></td>
+            </tr>
+            <tr>
+              <td>Apellido Paterno</td>
+              <td><input type="text" name="txt_appaterno"></td>
+            </tr>
+            <tr>
+                <td>Apellido Materno</td>
+                <td><input type="text" name="txt_apmaterno"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td><input type="text" name="txt_edad"></td>
+            </tr>
+            <tr>
+              <td>Nombre Vacuna</td>
+              <td><input type="text" name="txt_nom_vacuna"></td>
+            </tr>
+            <tr>
+              <td>Fecha Vacuncion</td>
+              <td><input type="text" name="txt_fecha"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Guardar"></td>
+                <td></td>
+            </tr>
+        </table>
+      </form>
+    </div>
+    <!-- Contenido -->
+
+    <!-- Footer -->
+    <footer class="foot fixed-bottom">
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+    
+                <div class="col-sm-4 p">
+                  <div class="row">
+                    <div class="col-sm-">
+                      <p class="pfoot" align="center">
+                      
+                        Teléfono de Asistencia - +56 2 7734 9864
+                        <br>
+                        ______________________________________________
+                        <br>
+      
+                        Opción 1: Mesa de Ayuda
+                        <br>
+                        Opción 2: Reclamos y Consultas
+                        <br>
+                        Opción 3: Consultar Stock
+                        ______________________________________________
+                        <br><br>
+    
+                        Correo: centrodevacunado.macul@gob.cl
+      
+                      </p>
+                    </div>
+    
+                    <div class="col-sm-6">
+    
+                    </div>
+                  </div>
+    
+                </div>
+
+                <div class="col-sm-4">
+    
+                </div>
+    
+            </div>
+        </div>
+      </footer>  
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
